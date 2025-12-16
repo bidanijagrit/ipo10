@@ -699,384 +699,10 @@
     </div>
   </div>
 
-  <script>
-    const IPO_DATA = [
-      {
-        name: "NovaTech Systems",
-        ticker: "NOVATECH",
-        status: "Open",
-        board: "Mainboard",
-        industry: "IT Services",
-        risk: "Moderate",
-        open: "15 Dec 2025",
-        close: "18 Dec 2025",
-        priceBand: "₹120 – ₹126",
-        lot: "119 shares",
-        minInvestment: "₹14,994",
-        issueSize: "₹1,100 Cr",
-        issueType: "Book Built",
-        gmp: "+₹42",
-        gmpType: "Strong GMP",
-        subsHNI: "1.8x",
-        subsNII: "2.4x",
-        subsRetail: "3.1x",
-        allotment: "23 Dec 2025",
-        listing: "27 Dec 2025",
-        exchange: "NSE / BSE",
-        registrar: "KFin Technologies",
-        detailUrl: "https://novatech.example.com"
-      },
-      {
-        name: "AgroFresh Foods",
-        ticker: "AGROFRSH",
-        status: "Open",
-        board: "SME",
-        industry: "FMCG",
-        risk: "Moderate",
-        open: "14 Dec 2025",
-        close: "17 Dec 2025",
-        priceBand: "₹72 – ₹76",
-        lot: "2000 shares",
-        minInvestment: "₹1,52,000",
-        issueSize: "₹48 Cr",
-        issueType: "Fixed Price",
-        gmp: "+₹18",
-        gmpType: "Positive GMP",
-        subsHNI: "1.2x",
-        subsNII: "1.6x",
-        subsRetail: "2.0x",
-        allotment: "22 Dec 2025",
-        listing: "27 Dec 2025",
-        exchange: "NSE SME",
-        registrar: "Link Intime India",
-        detailUrl: "https://agrofresh.example.com"
-      },
-      {
-        name: "SkyPort Logistics",
-        ticker: "SKYPORT",
-        status: "Open",
-        board: "Mainboard",
-        industry: "Logistics",
-        risk: "High",
-        open: "13 Dec 2025",
-        close: "16 Dec 2025",
-        priceBand: "₹480 – ₹500",
-        lot: "30 shares",
-        minInvestment: "₹15,000",
-        issueSize: "₹2,900 Cr",
-        issueType: "Book Built",
-        gmp: "+₹95",
-        gmpType: "High GMP",
-        subsHNI: "0.9x",
-        subsNII: "1.4x",
-        subsRetail: "1.7x",
-        allotment: "20 Dec 2025",
-        listing: "24 Dec 2025",
-        exchange: "NSE / BSE",
-        registrar: "KFin Technologies",
-        detailUrl: "https://skyport.example.com"
-      },
-      {
-        name: "MediCure Pharma",
-        ticker: "MEDICURE",
-        status: "Open",
-        board: "Mainboard",
-        industry: "Pharma",
-        risk: "Moderate",
-        open: "12 Dec 2025",
-        close: "16 Dec 2025",
-        priceBand: "₹335 – ₹350",
-        lot: "42 shares",
-        minInvestment: "₹14,700",
-        issueSize: "₹1,750 Cr",
-        issueType: "Book Built",
-        gmp: "+₹60",
-        gmpType: "Strong GMP",
-        subsHNI: "1.1x",
-        subsNII: "1.5x",
-        subsRetail: "2.6x",
-        allotment: "21 Dec 2025",
-        listing: "26 Dec 2025",
-        exchange: "NSE / BSE",
-        registrar: "Link Intime India",
-        detailUrl: "https://medicure.example.com"
-      },
-      {
-        name: "GreenVolt Energy",
-        ticker: "GVOLT",
-        status: "Upcoming",
-        board: "Mainboard",
-        industry: "Renewable Energy",
-        risk: "Moderate",
-        open: "20 Dec 2025",
-        close: "23 Dec 2025",
-        priceBand: "₹260 – ₹272",
-        lot: "55 shares",
-        minInvestment: "₹14,960",
-        issueSize: "₹1,300 Cr",
-        issueType: "Book Built",
-        gmp: "+₹34 (gray)",
-        gmpType: "Indicative GMP",
-        subsHNI: "-",
-        subsNII: "-",
-        subsRetail: "-",
-        allotment: "28 Dec 2025",
-        listing: "02 Jan 2026",
-        exchange: "NSE / BSE",
-        registrar: "KFin Technologies",
-        detailUrl: "https://greenvolt.example.com"
-      },
-      {
-        name: "UrbanNest Realty",
-        ticker: "URNEST",
-        status: "Upcoming",
-        board: "SME",
-        industry: "Real Estate",
-        risk: "High",
-        open: "21 Dec 2025",
-        close: "24 Dec 2025",
-        priceBand: "₹90 – ₹94",
-        lot: "1600 shares",
-        minInvestment: "₹1,44,000",
-        issueSize: "₹62 Cr",
-        issueType: "Fixed Price",
-        gmp: "+₹10 (gray)",
-        gmpType: "Indicative GMP",
-        subsHNI: "-",
-        subsNII: "-",
-        subsRetail: "-",
-        allotment: "30 Dec 2025",
-        listing: "03 Jan 2026",
-        exchange: "NSE SME",
-        registrar: "Bigshare Services",
-        detailUrl: "https://urbannest.example.com"
-      },
-      {
-        name: "FinEdge Capital",
-        ticker: "FINEDGE",
-        status: "Upcoming",
-        board: "Mainboard",
-        industry: "Financial Services",
-        risk: "Moderate",
-        open: "26 Dec 2025",
-        close: "30 Dec 2025",
-        priceBand: "₹540 – ₹555",
-        lot: "27 shares",
-        minInvestment: "₹14,985",
-        issueSize: "₹3,200 Cr",
-        issueType: "Book Built",
-        gmp: "TBD",
-        gmpType: "GMP not available",
-        subsHNI: "-",
-        subsNII: "-",
-        subsRetail: "-",
-        allotment: "03 Jan 2026",
-        listing: "07 Jan 2026",
-        exchange: "NSE / BSE",
-        registrar: "KFin Technologies",
-        detailUrl: "https://finedge.example.com"
-      },
-      {
-        name: "AquaPure Beverages",
-        ticker: "AQPURE",
-        status: "Upcoming",
-        board: "SME",
-        industry: "Beverages",
-        risk: "High",
-        open: "27 Dec 2025",
-        close: "29 Dec 2025",
-        priceBand: "₹64 – ₹68",
-        lot: "2000 shares",
-        minInvestment: "₹1,36,000",
-        issueSize: "₹40 Cr",
-        issueType: "Fixed Price",
-        gmp: "+₹8 (gray)",
-        gmpType: "Indicative GMP",
-        subsHNI: "-",
-        subsNII: "-",
-        subsRetail: "-",
-        allotment: "04 Jan 2026",
-        listing: "08 Jan 2026",
-        exchange: "NSE SME",
-        registrar: "Link Intime India",
-        detailUrl: "https://aquapure.example.com"
-      },
-      {
-        name: "CyberFort Security",
-        ticker: "CYBFORT",
-        status: "Closed",
-        board: "Mainboard",
-        industry: "Cyber Security",
-        risk: "Moderate",
-        open: "02 Dec 2025",
-        close: "05 Dec 2025",
-        priceBand: "₹410 – ₹432",
-        lot: "34 shares",
-        minInvestment: "₹14,688",
-        issueSize: "₹1,900 Cr",
-        issueType: "Book Built",
-        gmp: "+₹120",
-        gmpType: "High GMP",
-        subsHNI: "5.1x",
-        subsNII: "7.4x",
-        subsRetail: "11.3x",
-        allotment: "10 Dec 2025",
-        listing: "13 Dec 2025",
-        exchange: "NSE / BSE",
-        registrar: "KFin Technologies",
-        detailUrl: "https://cyberfort.example.com"
-      },
-      {
-        name: "FarmLink Agritech",
-        ticker: "FARMLNK",
-        status: "Closed",
-        board: "SME",
-        industry: "Agri Tech",
-        risk: "Moderate",
-        open: "30 Nov 2025",
-        close: "03 Dec 2025",
-        priceBand: "₹88 – ₹92",
-        lot: "1600 shares",
-        minInvestment: "₹1,47,200",
-        issueSize: "₹55 Cr",
-        issueType: "Fixed Price",
-        gmp: "+₹22",
-        gmpType: "Positive GMP",
-        subsHNI: "3.0x",
-        subsNII: "3.6x",
-        subsRetail: "5.2x",
-        allotment: "08 Dec 2025",
-        listing: "11 Dec 2025",
-        exchange: "NSE SME",
-        registrar: "Bigshare Services",
-        detailUrl: "https://farmlink.example.com"
-      },
-      {
-        name: "Zenith Motors",
-        ticker: "ZENMTR",
-        status: "Closed",
-        board: "Mainboard",
-        industry: "Auto",
-        risk: "High",
-        open: "25 Nov 2025",
-        close: "28 Nov 2025",
-        priceBand: "₹620 – ₹640",
-        lot: "23 shares",
-        minInvestment: "₹14,720",
-        issueSize: "₹4,200 Cr",
-        issueType: "Book Built",
-        gmp: "+₹155",
-        gmpType: "High GMP",
-        subsHNI: "4.2x",
-        subsNII: "5.9x",
-        subsRetail: "9.8x",
-        allotment: "04 Dec 2025",
-        listing: "09 Dec 2025",
-        exchange: "NSE / BSE",
-        registrar: "Link Intime India",
-        detailUrl: "https://zenithmotors.example.com"
-      },
-      {
-        name: "EduQuest Learning",
-        ticker: "EDUQST",
-        status: "Closed",
-        board: "SME",
-        industry: "EdTech",
-        risk: "High",
-        open: "22 Nov 2025",
-        close: "25 Nov 2025",
-        priceBand: "₹70 – ₹74",
-        lot: "1800 shares",
-        minInvestment: "₹1,33,200",
-        issueSize: "₹36 Cr",
-        issueType: "Fixed Price",
-        gmp: "+₹14",
-        gmpType: "Positive GMP",
-        subsHNI: "2.1x",
-        subsNII: "2.9x",
-        subsRetail: "4.7x",
-        allotment: "01 Dec 2025",
-        listing: "05 Dec 2025",
-        exchange: "NSE SME",
-        registrar: "Bigshare Services",
-        detailUrl: "https://eduquest.example.com"
-      },
-      {
-        name: "HelioSolar Infra",
-        ticker: "HELIOSOL",
-        status: "Closed",
-        board: "Mainboard",
-        industry: "Infra / Solar",
-        risk: "Moderate",
-        open: "18 Nov 2025",
-        close: "21 Nov 2025",
-        priceBand: "₹280 – ₹292",
-        lot: "51 shares",
-        minInvestment: "₹14,892",
-        issueSize: "₹1,150 Cr",
-        issueType: "Book Built",
-        gmp: "+₹60",
-        gmpType: "Strong GMP",
-        subsHNI: "2.5x",
-        subsNII: "3.4x",
-        subsRetail: "6.1x",
-        allotment: "27 Nov 2025",
-        listing: "02 Dec 2025",
-        exchange: "NSE / BSE",
-        registrar: "KFin Technologies",
-        detailUrl: "https://heliosolar.example.com"
-      },
-      {
-        name: "ByteCraft IT",
-        ticker: "BYTECRF",
-        status: "Closed",
-        board: "SME",
-        industry: "IT Services",
-        risk: "High",
-        open: "15 Nov 2025",
-        close: "18 Nov 2025",
-        priceBand: "₹98 – ₹102",
-        lot: "1200 shares",
-        minInvestment: "₹1,17,600",
-        issueSize: "₹72 Cr",
-        issueType: "Fixed Price",
-        gmp: "+₹26",
-        gmpType: "Positive GMP",
-        subsHNI: "2.8x",
-        subsNII: "3.7x",
-        subsRetail: "6.9x",
-        allotment: "24 Nov 2025",
-        listing: "29 Nov 2025",
-        exchange: "NSE SME",
-        registrar: "Bigshare Services",
-        detailUrl: "https://bytecraft.example.com"
-      },
-      {
-        name: "RapidRide Mobility",
-        ticker: "RAPIDRD",
-        status: "Closed",
-        board: "Mainboard",
-        industry: "Mobility / EV",
-        risk: "High",
-        open: "10 Nov 2025",
-        close: "13 Nov 2025",
-        priceBand: "₹360 – ₹374",
-        lot: "40 shares",
-        minInvestment: "₹14,960",
-        issueSize: "₹1,600 Cr",
-        issueType: "Book Built",
-        gmp: "+₹82",
-        gmpType: "Strong GMP",
-        subsHNI: "1.9x",
-        subsNII: "2.6x",
-        subsRetail: "3.9x",
-        allotment: "19 Nov 2025",
-        listing: "23 Nov 2025",
-        exchange: "NSE / BSE",
-        registrar: "Link Intime India",
-        detailUrl: "https://rapidride.example.com"
-      }
-    ];
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-analytics.js";
+    import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/12.6.0/firebase-database.js";
 
     const grid = document.getElementById("ipoGrid");
     const modalBackdrop = document.getElementById("modalBackdrop");
@@ -1097,8 +723,198 @@
     const countClosed = document.getElementById("countClosed");
     const countUpcoming = document.getElementById("countUpcoming");
 
+    let IPO_DATA = [];
     let currentFilter = "All";
     let currentSearch = "";
+    let loading = true;
+
+    // --- Firebase init ---
+    const firebaseConfig = {
+      apiKey: "AIzaSyAmXdzV3LDUe7CF0cHBKa6KD2vcPwZudCM",
+      authDomain: "ipo-jss.firebaseapp.com",
+      databaseURL: "https://ipo-jss-default-rtdb.firebaseio.com",
+      projectId: "ipo-jss",
+      storageBucket: "ipo-jss.firebasestorage.app",
+      messagingSenderId: "891300046260",
+      appId: "1:891300046260:web:bb76b822b506f02cfb7ee1",
+      measurementId: "G-VXDLQ74PP0"
+    };
+    const app = initializeApp(firebaseConfig);
+    getAnalytics(app);
+    const db = getDatabase(app);
+
+    // Fallback sample IPOs (used only if Firebase is empty)
+    const SAMPLE_IPO_DATA = [
+      {
+        id: "novatech-2025", name: "NovaTech Systems", ticker: "NOVATECH", status: "Open", board: "Mainboard",
+        industry: "IT Services", risk: "Moderate", open: "15 Dec 2025", close: "18 Dec 2025",
+        priceBand: "₹120 – ₹126", lot: "119 shares", minInvestment: "₹14,994", issueSize: "₹1,100 Cr",
+        issueType: "Book Built", gmp: "+₹42", gmpType: "Strong GMP", subsHNI: "1.8x", subsNII: "2.4x", subsRetail: "3.1x",
+        allotment: "23 Dec 2025", listing: "27 Dec 2025", exchange: "NSE / BSE", registrar: "KFin Technologies",
+        detailUrl: "https://novatech.example.com"
+      },
+      {
+        id: "agrofresh-2025", name: "AgroFresh Foods", ticker: "AGROFRSH", status: "Open", board: "SME",
+        industry: "FMCG", risk: "Moderate", open: "14 Dec 2025", close: "17 Dec 2025",
+        priceBand: "₹72 – ₹76", lot: "2000 shares", minInvestment: "₹1,52,000", issueSize: "₹48 Cr",
+        issueType: "Fixed Price", gmp: "+₹18", gmpType: "Positive GMP", subsHNI: "1.2x", subsNII: "1.6x", subsRetail: "2.0x",
+        allotment: "22 Dec 2025", listing: "27 Dec 2025", exchange: "NSE SME", registrar: "Link Intime India",
+        detailUrl: "https://agrofresh.example.com"
+      },
+      {
+        id: "skyport-2025", name: "SkyPort Logistics", ticker: "SKYPORT", status: "Open", board: "Mainboard",
+        industry: "Logistics", risk: "High", open: "13 Dec 2025", close: "16 Dec 2025",
+        priceBand: "₹480 – ₹500", lot: "30 shares", minInvestment: "₹15,000", issueSize: "₹2,900 Cr",
+        issueType: "Book Built", gmp: "+₹95", gmpType: "High GMP", subsHNI: "0.9x", subsNII: "1.4x", subsRetail: "1.7x",
+        allotment: "20 Dec 2025", listing: "24 Dec 2025", exchange: "NSE / BSE", registrar: "KFin Technologies",
+        detailUrl: "https://skyport.example.com"
+      },
+      {
+        id: "medicure-2025", name: "MediCure Pharma", ticker: "MEDICURE", status: "Open", board: "Mainboard",
+        industry: "Pharma", risk: "Moderate", open: "12 Dec 2025", close: "16 Dec 2025",
+        priceBand: "₹335 – ₹350", lot: "42 shares", minInvestment: "₹14,700", issueSize: "₹1,750 Cr",
+        issueType: "Book Built", gmp: "+₹60", gmpType: "Strong GMP", subsHNI: "1.1x", subsNII: "1.5x", subsRetail: "2.6x",
+        allotment: "21 Dec 2025", listing: "26 Dec 2025", exchange: "NSE / BSE", registrar: "Link Intime India",
+        detailUrl: "https://medicure.example.com"
+      },
+      {
+        id: "greenvolt-2025", name: "GreenVolt Energy", ticker: "GVOLT", status: "Upcoming", board: "Mainboard",
+        industry: "Renewable Energy", risk: "Moderate", open: "20 Dec 2025", close: "23 Dec 2025",
+        priceBand: "₹260 – ₹272", lot: "55 shares", minInvestment: "₹14,960", issueSize: "₹1,300 Cr",
+        issueType: "Book Built", gmp: "+₹34 (gray)", gmpType: "Indicative GMP", subsHNI: "-", subsNII: "-", subsRetail: "-",
+        allotment: "28 Dec 2025", listing: "02 Jan 2026", exchange: "NSE / BSE", registrar: "KFin Technologies",
+        detailUrl: "https://greenvolt.example.com"
+      },
+      {
+        id: "urbannest-2025", name: "UrbanNest Realty", ticker: "URNEST", status: "Upcoming", board: "SME",
+        industry: "Real Estate", risk: "High", open: "21 Dec 2025", close: "24 Dec 2025",
+        priceBand: "₹90 – ₹94", lot: "1600 shares", minInvestment: "₹1,44,000", issueSize: "₹62 Cr",
+        issueType: "Fixed Price", gmp: "+₹10 (gray)", gmpType: "Indicative GMP", subsHNI: "-", subsNII: "-", subsRetail: "-",
+        allotment: "30 Dec 2025", listing: "03 Jan 2026", exchange: "NSE SME", registrar: "Bigshare Services",
+        detailUrl: "https://urbannest.example.com"
+      },
+      {
+        id: "finedge-2025", name: "FinEdge Capital", ticker: "FINEDGE", status: "Upcoming", board: "Mainboard",
+        industry: "Financial Services", risk: "Moderate", open: "26 Dec 2025", close: "30 Dec 2025",
+        priceBand: "₹540 – ₹555", lot: "27 shares", minInvestment: "₹14,985", issueSize: "₹3,200 Cr",
+        issueType: "Book Built", gmp: "TBD", gmpType: "GMP not available", subsHNI: "-", subsNII: "-", subsRetail: "-",
+        allotment: "03 Jan 2026", listing: "07 Jan 2026", exchange: "NSE / BSE", registrar: "KFin Technologies",
+        detailUrl: "https://finedge.example.com"
+      },
+      {
+        id: "aquapure-2025", name: "AquaPure Beverages", ticker: "AQPURE", status: "Upcoming", board: "SME",
+        industry: "Beverages", risk: "High", open: "27 Dec 2025", close: "29 Dec 2025",
+        priceBand: "₹64 – ₹68", lot: "2000 shares", minInvestment: "₹1,36,000", issueSize: "₹40 Cr",
+        issueType: "Fixed Price", gmp: "+₹8 (gray)", gmpType: "Indicative GMP", subsHNI: "-", subsNII: "-", subsRetail: "-",
+        allotment: "04 Jan 2026", listing: "08 Jan 2026", exchange: "NSE SME", registrar: "Link Intime India",
+        detailUrl: "https://aquapure.example.com"
+      },
+      {
+        id: "cyberfort-2025", name: "CyberFort Security", ticker: "CYBFORT", status: "Closed", board: "Mainboard",
+        industry: "Cyber Security", risk: "Moderate", open: "02 Dec 2025", close: "05 Dec 2025",
+        priceBand: "₹410 – ₹432", lot: "34 shares", minInvestment: "₹14,688", issueSize: "₹1,900 Cr",
+        issueType: "Book Built", gmp: "+₹120", gmpType: "High GMP", subsHNI: "5.1x", subsNII: "7.4x", subsRetail: "11.3x",
+        allotment: "10 Dec 2025", listing: "13 Dec 2025", exchange: "NSE / BSE", registrar: "KFin Technologies",
+        detailUrl: "https://cyberfort.example.com"
+      },
+      {
+        id: "farmlink-2025", name: "FarmLink Agritech", ticker: "FARMLNK", status: "Closed", board: "SME",
+        industry: "Agri Tech", risk: "Moderate", open: "30 Nov 2025", close: "03 Dec 2025",
+        priceBand: "₹88 – ₹92", lot: "1600 shares", minInvestment: "₹1,47,200", issueSize: "₹55 Cr",
+        issueType: "Fixed Price", gmp: "+₹22", gmpType: "Positive GMP", subsHNI: "3.0x", subsNII: "3.6x", subsRetail: "5.2x",
+        allotment: "08 Dec 2025", listing: "11 Dec 2025", exchange: "NSE SME", registrar: "Bigshare Services",
+        detailUrl: "https://farmlink.example.com"
+      },
+      {
+        id: "zenith-2025", name: "Zenith Motors", ticker: "ZENMTR", status: "Closed", board: "Mainboard",
+        industry: "Auto", risk: "High", open: "25 Nov 2025", close: "28 Nov 2025",
+        priceBand: "₹620 – ₹640", lot: "23 shares", minInvestment: "₹14,720", issueSize: "₹4,200 Cr",
+        issueType: "Book Built", gmp: "+₹155", gmpType: "High GMP", subsHNI: "4.2x", subsNII: "5.9x", subsRetail: "9.8x",
+        allotment: "04 Dec 2025", listing: "09 Dec 2025", exchange: "NSE / BSE", registrar: "Link Intime India",
+        detailUrl: "https://zenithmotors.example.com"
+      },
+      {
+        id: "eduquest-2025", name: "EduQuest Learning", ticker: "EDUQST", status: "Closed", board: "SME",
+        industry: "EdTech", risk: "High", open: "22 Nov 2025", close: "25 Nov 2025",
+        priceBand: "₹70 – ₹74", lot: "1800 shares", minInvestment: "₹1,33,200", issueSize: "₹36 Cr",
+        issueType: "Fixed Price", gmp: "+₹14", gmpType: "Positive GMP", subsHNI: "2.1x", subsNII: "2.9x", subsRetail: "4.7x",
+        allotment: "01 Dec 2025", listing: "05 Dec 2025", exchange: "NSE SME", registrar: "Bigshare Services",
+        detailUrl: "https://eduquest.example.com"
+      },
+      {
+        id: "heliosolar-2025", name: "HelioSolar Infra", ticker: "HELIOSOL", status: "Closed", board: "Mainboard",
+        industry: "Infra / Solar", risk: "Moderate", open: "18 Nov 2025", close: "21 Nov 2025",
+        priceBand: "₹280 – ₹292", lot: "51 shares", minInvestment: "₹14,892", issueSize: "₹1,150 Cr",
+        issueType: "Book Built", gmp: "+₹60", gmpType: "Strong GMP", subsHNI: "2.5x", subsNII: "3.4x", subsRetail: "6.1x",
+        allotment: "27 Nov 2025", listing: "02 Dec 2025", exchange: "NSE / BSE", registrar: "KFin Technologies",
+        detailUrl: "https://heliosolar.example.com"
+      },
+      {
+        id: "bytecraft-2025", name: "ByteCraft IT", ticker: "BYTECRF", status: "Closed", board: "SME",
+        industry: "IT Services", risk: "High", open: "15 Nov 2025", close: "18 Nov 2025",
+        priceBand: "₹98 – ₹102", lot: "1200 shares", minInvestment: "₹1,17,600", issueSize: "₹72 Cr",
+        issueType: "Fixed Price", gmp: "+₹26", gmpType: "Positive GMP", subsHNI: "2.8x", subsNII: "3.7x", subsRetail: "6.9x",
+        allotment: "24 Nov 2025", listing: "29 Nov 2025", exchange: "NSE SME", registrar: "Bigshare Services",
+        detailUrl: "https://bytecraft.example.com"
+      },
+      {
+        id: "rapidride-2025", name: "RapidRide Mobility", ticker: "RAPIDRD", status: "Closed", board: "Mainboard",
+        industry: "Mobility / EV", risk: "High", open: "10 Nov 2025", close: "13 Nov 2025",
+        priceBand: "₹360 – ₹374", lot: "40 shares", minInvestment: "₹14,960", issueSize: "₹1,600 Cr",
+        issueType: "Book Built", gmp: "+₹82", gmpType: "Strong GMP", subsHNI: "1.9x", subsNII: "2.6x", subsRetail: "3.9x",
+        allotment: "19 Nov 2025", listing: "23 Nov 2025", exchange: "NSE / BSE", registrar: "Link Intime India",
+        detailUrl: "https://rapidride.example.com"
+      }
+    ];
+
+    function normalizeIpo(id, ipo = {}) {
+      return {
+        id,
+        name: ipo.name || "NA",
+        ticker: ipo.ticker || (id || "NA").toUpperCase(),
+        status: ipo.status || "Upcoming",
+        board: ipo.board || "Mainboard",
+        industry: ipo.industry || "—",
+        risk: ipo.risk || "—",
+        open: ipo.open || "—",
+        close: ipo.close || "—",
+        priceBand: ipo.priceBand || "—",
+        lot: ipo.lot || "—",
+        minInvestment: ipo.minInvestment || "—",
+        issueSize: ipo.issueSize || "—",
+        issueType: ipo.issueType || "—",
+        gmp: ipo.gmp || "—",
+        gmpType: ipo.gmpType || "—",
+        subsHNI: ipo.subsHNI || (ipo.subs ? ipo.subs.split("/")[0]?.trim() || "—" : "—"),
+        subsNII: ipo.subsNII || (ipo.subs ? ipo.subs.split("/")[1]?.trim() || "—" : "—"),
+        subsRetail: ipo.subsRetail || (ipo.subs ? ipo.subs.split("/")[2]?.trim() || "—" : "—"),
+        allotment: ipo.allotment || "—",
+        listing: ipo.listing || "—",
+        exchange: ipo.exchange || "—",
+        registrar: ipo.registrar || "—",
+        detailUrl: ipo.detailUrl || "#",
+      };
+    }
+
+    async function loadIpos() {
+      try {
+        loading = true;
+        renderCards();
+        const snap = await get(ref(db, "ipos"));
+        const val = snap.val() || {};
+        IPO_DATA = Object.entries(val).map(([id, ipo]) => normalizeIpo(id, ipo));
+        if (IPO_DATA.length === 0) {
+          IPO_DATA = SAMPLE_IPO_DATA;
+        }
+      } catch (err) {
+        console.error("Failed to load IPOs", err);
+        alert("Failed to load IPOs from Firebase");
+      } finally {
+        loading = false;
+        updateCounts();
+        renderCards();
+      }
+    }
 
     function updateCounts() {
       const total = IPO_DATA.length;
@@ -1117,9 +933,9 @@
         const byFilter = currentFilter === "All" || ipo.status === currentFilter;
         const query = currentSearch.trim().toLowerCase();
         const bySearch = !query ||
-          ipo.name.toLowerCase().includes(query) ||
-          ipo.ticker.toLowerCase().includes(query) ||
-          ipo.industry.toLowerCase().includes(query);
+          (ipo.name || "").toLowerCase().includes(query) ||
+          (ipo.ticker || "").toLowerCase().includes(query) ||
+          (ipo.industry || "").toLowerCase().includes(query);
         return byFilter && bySearch;
       });
     }
@@ -1129,19 +945,25 @@
       const open = filtered.filter(i => i.status === "Open").length;
       const closed = filtered.filter(i => i.status === "Closed").length;
       const upcoming = filtered.filter(i => i.status === "Upcoming").length;
+      const state = loading ? "Loading from Firebase..." : "";
       summaryText.innerHTML =
-        `Showing <span class="highlight">${filtered.length}</span> IPO(s) &nbsp;•&nbsp; Open: ${open} &nbsp;•&nbsp; Closed: ${closed} &nbsp;•&nbsp; Upcoming: ${upcoming}`;
+        `${state ? state + " · " : ""}Showing <span class="highlight">${filtered.length}</span> IPO(s) &nbsp;•&nbsp; Open: ${open} &nbsp;•&nbsp; Closed: ${closed} &nbsp;•&nbsp; Upcoming: ${upcoming}`;
     }
 
     function renderCards() {
       const data = getFilteredData();
-      grid.innerHTML = data.map((ipo) => {
-        const realIndex = IPO_DATA.indexOf(ipo);
-        const gmpClass = ipo.gmp.startsWith("-") ? "gmp gmp-negative" : "gmp";
+      if (loading) {
+        grid.innerHTML = `<div class="card"><div class="card-inner">Loading IPOs from Firebase...</div></div>`;
+        renderSummary();
+        return;
+      }
+
+      grid.innerHTML = data.map((ipo, realIndex) => {
+        const gmpClass = (ipo.gmp || "").startsWith("-") ? "gmp gmp-negative" : "gmp";
         const sentimentChip =
-          ipo.gmp.includes("High") || ipo.gmpType.includes("High")
+          (ipo.gmp || "").includes("High") || (ipo.gmpType || "").includes("High")
             ? '<span class="pill">🔥 High GMP</span>'
-            : ipo.gmpType.includes("Indicative")
+            : (ipo.gmpType || "").includes("Indicative")
             ? '<span class="pill">ℹ️ Early GMP</span>'
             : ipo.gmp === "TBD"
             ? '<span class="pill">⏳ GMP Pending</span>'
@@ -1155,7 +977,7 @@
                 <div class="title">${ipo.name}</div>
                 <div class="sub">${ipo.ticker} · ${ipo.industry}</div>
               </div>
-              <div class="chip status-${ipo.status.toLowerCase()}">
+              <div class="chip status-${(ipo.status || "upcoming").toLowerCase()}">
                 <span class="chip-dot"></span>
                 ${ipo.status}
               </div>
@@ -1163,8 +985,8 @@
 
             <div class="tag-row">
               <span class="pill">${ipo.board}</span>
-              <span class="pill">${ipo.issueType}</span>
-              <span class="pill">Risk: ${ipo.risk}</span>
+              <span class="pill">${ipo.issueType || "—"}</span>
+              <span class="pill">Risk: ${ipo.risk || "—"}</span>
               ${sentimentChip}
             </div>
 
@@ -1218,7 +1040,7 @@
     }
 
     function openModal(idx) {
-      const ipo = IPO_DATA[idx];
+      const ipo = getFilteredData()[idx];
       modalTitle.textContent = ipo.name;
 
       modalMetaTop.innerHTML = `
@@ -1228,7 +1050,7 @@
         <span class="modal-badge">Risk: ${ipo.risk}</span>
       `;
 
-      const gmpClass = ipo.gmp.startsWith("-") ? "gmp-highlight gmp-negative" : "gmp-highlight";
+      const gmpClass = (ipo.gmp || "").startsWith("-") ? "gmp-highlight gmp-negative" : "gmp-highlight";
 
       modalList.innerHTML = `
         <div>
@@ -1340,6 +1162,7 @@
 
     updateCounts();
     renderCards();
+    loadIpos();
 
     // Splash hide logic
     const splash = document.getElementById("splash");
